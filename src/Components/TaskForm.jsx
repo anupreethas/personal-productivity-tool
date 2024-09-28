@@ -3,7 +3,7 @@ import { useState } from "react";
 import "./TaskForm.css";
 import Tag from "./Tag";
 
-const TaskForm = ({setTasks}) => {
+const TaskForm = ({ setTasks }) => {
   const [taskData, setTaskData] = useState({
     task: "",
     status: "todo",
@@ -17,11 +17,10 @@ const TaskForm = ({setTasks}) => {
       return { ...previousState, [name]: value };
     });
   };
-  
+
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    // Check if task is empty before adding it to the list
     if (taskData.task.trim() !== "") {
       setTasks((previousState) => [...previousState, taskData]);
       setTaskData({
@@ -30,12 +29,11 @@ const TaskForm = ({setTasks}) => {
         tags: [],
       });
     } else {
-      // Add CSS class to the alert message element
       const alertElement = document.getElementById("alert-message");
       alertElement.classList.add("alert-show");
       setTimeout(() => {
         alertElement.classList.remove("alert-show");
-      }, 3000); // Remove class after 3 seconds
+      }, 3000);
     }
   };
 
@@ -53,8 +51,8 @@ const TaskForm = ({setTasks}) => {
   };
 
   const checkTag = (tag) => {
-    return taskData.tags.some(item => item === tag)
-  }
+    return taskData.tags.some((item) => item === tag);
+  };
 
   return (
     <>
@@ -70,9 +68,21 @@ const TaskForm = ({setTasks}) => {
           />
           <div className="task_form_bottom_line">
             <div>
-              <Tag tagName="Urgent" selectTag={selectTag} selected ={checkTag("Urgent")}/>
-              <Tag tagName="Important" selectTag={selectTag} selected ={checkTag("Important")} />
-              <Tag tagName="Extras" selectTag={selectTag} selected ={checkTag("Extras")} />
+              <Tag
+                tagName="Urgent"
+                selectTag={selectTag}
+                selected={checkTag("Urgent")}
+              />
+              <Tag
+                tagName="Important"
+                selectTag={selectTag}
+                selected={checkTag("Important")}
+              />
+              <Tag
+                tagName="Extras"
+                selectTag={selectTag}
+                selected={checkTag("Extras")}
+              />
             </div>
             <div>
               <select
@@ -90,7 +100,7 @@ const TaskForm = ({setTasks}) => {
               </button>
             </div>
           </div>
-          {/* Added element for alert message */}
+
           <div id="alert-message" className="alert-message">
             Oops! Looks like you forgot to add your task! 🙈
           </div>

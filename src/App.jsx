@@ -10,7 +10,7 @@ const App = () => {
   const [tasks, setTasks] = useState(JSON.parse(oldTasks) || []);
 
   useEffect(() => {
-    localStorage.setItem("tasks", JSON.stringify(tasks))
+    localStorage.setItem("tasks", JSON.stringify(tasks));
   }, [tasks]);
 
   const handleDelete = (taskIndex) => {
@@ -20,7 +20,7 @@ const App = () => {
 
   return (
     <div className="app">
-      <Header/>
+      <Header />
       <TaskForm setTasks={setTasks} />
       <main className="app_main">
         <TaskColumns

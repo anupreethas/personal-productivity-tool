@@ -5,10 +5,10 @@ const Tag = (props) => {
   const { tagName, selectTag, selected } = props;
 
   const tagStyle = {
-    Urgent: {backgroundColor: "#ff6347"},
-    Important: {backgroundColor: "#FFA500"},
-    Extras: {backgroundColor: "#90EE90"},
-    default: {backgroundColor: "#f9f9f9"},
+    Urgent: { backgroundColor: "#ff6347" },
+    Important: { backgroundColor: "#FFA500" },
+    Extras: { backgroundColor: "#90EE90" },
+    default: { backgroundColor: "#f9f9f9" },
   };
 
   return (

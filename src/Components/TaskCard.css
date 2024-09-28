@@ -1,66 +1,62 @@
-.task_Card{
-    width: 100%;
-    min-height: 100px;
-    border: 1px solid rgb(220, 220, 220);
-    border-radius: 10px;
-    padding: 15px;
-    margin: 15px 0px;
-    word-wrap: break-word;
+.task_Card {
+  width: 100%;
+  min-height: 100px;
+  border: 1px solid rgb(220, 220, 220);
+  border-radius: 10px;
+  padding: 15px;
+  margin: 15px 0px;
+  word-wrap: break-word;
 }
 
-.task_Card_text{
-    font-size: 18px;
-    margin-bottom: 20px;
-    background-color: hsla(0, 0%, 50%, 0.100);
-    border-radius: 5px;
-    
+.task_Card_text {
+  font-size: 18px;
+  margin-bottom: 20px;
+  background-color: hsla(0, 0%, 50%, 0.1);
+  border-radius: 5px;
 }
 
-.task_card_bottom_line{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 20px;
+.task_card_bottom_line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
 }
 
-.task_Card:hover .tasks_edit, .task_Card:hover .tasks_delete{
-    display: inline-block;
+.task_Card:hover .tasks_edit,
+.task_Card:hover .tasks_delete {
+  display: inline-block;
 }
 
-.tasks_edit, .tasks_delete{
-    width: 25px;
-    height: 25px;
-    border: none;
-    border-radius: 100%;
-    background-color: white;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    margin-top: px;
-    margin-left: 10px;
-    display: none;
-
-     /* display: flex;
-    align-items: center;
-    justify-content: center; */
+.tasks_edit,
+.tasks_delete {
+  width: 25px;
+  height: 25px;
+  border: none;
+  border-radius: 100%;
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  margin-top: px;
+  margin-left: 10px;
+  display: none;
 }
 
-.tasks_edit:hover, .tasks_delete:hover{
-    opacity: 100%;
-    background-color: hsla(0, 0%, 29%, 0.094);
+.tasks_edit:hover,
+.tasks_delete:hover {
+  opacity: 100%;
+  background-color: hsla(0, 0%, 29%, 0.094);
 }
 
-
-/* Responsive Modifications (in a different color) */
 @media (max-width: 768px) {
-    .task_Card {
-        padding: 10px; /* Reduce padding for smaller screens */
-    }
+  .task_Card {
+    padding: 10px;
+  }
 
-    .task_Card_text {
-        font-size: 16px; /* Reduce font size for smaller screens */
-    }
+  .task_Card_text {
+    font-size: 16px;
+  }
 
-    .task_card_bottom_line {
-        margin-top: 15px; /* Reduce margin for smaller screens */
-    }
+  .task_card_bottom_line {
+    margin-top: 15px;
+  }
 }
